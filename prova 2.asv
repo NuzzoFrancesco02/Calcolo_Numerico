@@ -1,0 +1,5 @@
+function fn = prova(t,y)
+K = 1;
+A = @(t,y) [-1 -(147/16);1 0];
+g = @(t) [-9*exp(-t./2)*(sin(3*t)^2-1)-4.5*exp(-t/4)*sin(3*t),0]';
+fn = A(t,y)*y + g(t);
